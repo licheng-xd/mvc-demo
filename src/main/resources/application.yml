@@ -1,0 +1,9 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: mvc-demo
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
