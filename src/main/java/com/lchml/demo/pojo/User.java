@@ -35,7 +35,7 @@ public class User implements Serializable {
     }
 
     public String info() {
-        return "Hello, 我是" + username + ", " + desc;
+        return "哈哈, 我是" + username + ", " + desc;
     }
 
 }

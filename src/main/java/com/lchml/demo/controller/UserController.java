@@ -3,12 +3,14 @@ package com.lchml.demo.controller;
 import com.lchml.demo.pojo.User;
 import com.lchml.demo.service.UserService;
 import com.lchml.demo.utils.StringUtil;
+import com.lchml.demo.utils.TimeUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.Objects;
 
 @Controller
@@ -36,6 +38,7 @@ public class UserController {
             return "error";
         }
         modelMap.addAttribute("loginInfo", user.info());
+        modelMap.addAttribute("today", TimeUtil.getNow());
         return "hello";
     }
 
