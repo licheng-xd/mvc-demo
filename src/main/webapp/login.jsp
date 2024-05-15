@@ -4,7 +4,7 @@
     <title>登录页</title>
 </head>
 <body>
-<h2>欢迎来到xxx</h2>
+<h2>欢迎来到浙江交通职业技术学院</h2>
 <form action="/login" method="post">
     用户名: <input type="text" name="username"><br>
     密码: <input type="password" name="passwd"><br>

@@ -4,7 +4,7 @@
     <title>个人主页</title>
 </head>
 <body>
-<h2>登录信息：${loginInfo}</h2>
-
+<h2>欢迎来到浙江交通职业技术学院</h2>
+<h3>登录信息：${loginInfo}</h3>
 </body>
 </html>
