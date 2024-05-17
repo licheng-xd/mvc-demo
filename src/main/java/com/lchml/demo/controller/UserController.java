@@ -23,6 +23,7 @@ public class UserController {
         return "login";
     }
 
+
     @RequestMapping("/reg")
     public String register(){
         return "register";
@@ -42,7 +43,7 @@ public class UserController {
     }
 
     @RequestMapping("/register")
-    public String hello(@RequestParam String username, @RequestParam String passwd, @RequestParam String desc, ModelMap modelMap) {
+    public String register(@RequestParam String username, @RequestParam String passwd, @RequestParam String desc, ModelMap modelMap) {
         // 校验参数
         if (!StringUtil.lengthCheck(username, 6, 12)) {
             modelMap.addAttribute("errorInfo", "用户名过长");
