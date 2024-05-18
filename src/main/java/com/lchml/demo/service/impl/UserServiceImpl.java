@@ -20,7 +20,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean createUser(String username, String passwd, String desc) {
+    public boolean createUser(String username, String passwd, String profile) {
         // 首先检查用户名是否已存在
         User exist = userDao.getByUsername(username);
         if (exist != null) {
@@ -28,7 +28,7 @@ public class UserServiceImpl implements UserService {
         }
         User user = new User();
         user.setUsername(username);
-        user.setDesc(desc);
+        user.setProfile(profile);
         user.setPasswd(passwd);
         // 创建数据库记录
         int ret = userDao.createUser(user);

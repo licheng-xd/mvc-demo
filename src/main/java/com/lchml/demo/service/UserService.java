@@ -6,5 +6,5 @@ public interface UserService {
 
     User getUser(String username);
 
-    boolean createUser(String username, String passwd, String desc);
+    boolean createUser(String username, String passwd, String profile);
 }

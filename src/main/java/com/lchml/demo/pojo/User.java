@@ -11,7 +11,7 @@ public class User implements Serializable {
     private String passwd;
 
     // 个人简介
-    private String desc;
+    private String profile;
 
     public String getUsername() {
         return username;
@@ -29,16 +29,16 @@ public class User implements Serializable {
         this.passwd = passwd;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getProfile() {
+        return profile;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setProfile(String profile) {
+        this.profile = profile;
     }
 
     public String info() {
-        return "哈哈, 我是" + username + ", " + desc;
+        return "哈哈, 我是" + username + ", " + profile;
     }
 
 }

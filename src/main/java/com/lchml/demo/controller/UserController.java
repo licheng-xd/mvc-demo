@@ -40,23 +40,23 @@ public class UserController {
         }
         modelMap.addAttribute("loginInfo", user.info());
         modelMap.addAttribute("today", TimeUtil.getNow());
-        return "hello";
+        return "loginSucc";
     }
 
     @RequestMapping("/register")
-    public String register(@RequestParam String username, @RequestParam String passwd, @RequestParam String desc, ModelMap modelMap) {
+    public String register(@RequestParam String username, @RequestParam String passwd, @RequestParam String profile, ModelMap modelMap) {
         // 校验参数
         if (!StringUtil.lengthCheck(username, 6, 12)) {
             modelMap.addAttribute("errorInfo", "用户名过长");
             return "error";
         }
-        if (StringUtil.isEmpty(desc)) {
+        if (StringUtil.isEmpty(profile)) {
             modelMap.addAttribute("errorInfo", "请输入个人简介");
             return "error";
         }
         try {
             // 创建用户
-            userService.createUser(username, passwd, desc);
+            userService.createUser(username, passwd, profile);
             return "regSucc";
         } catch (Exception e) {
             modelMap.addAttribute("errorInfo", e.getMessage());
