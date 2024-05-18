@@ -23,7 +23,6 @@ public class UserController {
         return "login";
     }
 
-
     @RequestMapping("/reg")
     public String register(){
         return "register";
