@@ -8,7 +8,7 @@
 <form action="/register" method="post">
     用户名: <input type="text" name="username"><br>
     密码: <input type="password" name="passwd"><br>
-    简介: <input type="text" name="desc"><br>
+    个人简介: <input type="text" name="desc"><br>
     <input type="submit" value="注册">
 </form>
 <a href="/">返回登录页</a>

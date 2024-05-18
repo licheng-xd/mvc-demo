@@ -4,10 +4,13 @@ import java.io.Serializable;
 
 public class User implements Serializable {
 
+    // 用户名
     private String username;
 
+    // 密码
     private String passwd;
 
+    // 个人简介
     private String desc;
 
     public String getUsername() {

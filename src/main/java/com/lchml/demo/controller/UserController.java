@@ -32,6 +32,7 @@ public class UserController {
     @RequestMapping("/login")
     public String login(@RequestParam String username, @RequestParam String passwd, ModelMap modelMap) {
         System.out.println("input:" + username);
+        // 查询用户
         User user = userService.getUser(username);
         if (Objects.isNull(user) || StringUtil.notEquals(passwd, user.getPasswd())) {
             modelMap.addAttribute("errorInfo", "用户不存在或密码错误");
@@ -54,6 +55,7 @@ public class UserController {
             return "error";
         }
         try {
+            // 创建用户
             userService.createUser(username, passwd, desc);
             return "regSucc";
         } catch (Exception e) {

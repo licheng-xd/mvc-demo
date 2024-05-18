@@ -13,6 +13,13 @@ public class UserServiceImpl implements UserService {
     @Resource
     private UserDao userDao;
 
+    @Override
+    public User getUser(String username) {
+        // 从数据库获取user信息
+        return userDao.getByUsername(username);
+    }
+
+    @Override
     public boolean createUser(String username, String passwd, String desc) {
         // 首先检查用户名是否已存在
         User exist = userDao.getByUsername(username);
@@ -29,10 +36,5 @@ public class UserServiceImpl implements UserService {
             throw new RuntimeException("创建用户失败");
         }
         return ret > 0;
-    }
-
-    public User getUser(String username) {
-        // 从数据库获取user信息
-        return userDao.getByUsername(username);
     }
 }

@@ -10,6 +10,7 @@ import javax.annotation.Resource;
 @Component
 public class UserDaoImpl implements UserDao {
 
+    // 模拟数据库
     @Resource
     private LocalStorage localStorage;
 
